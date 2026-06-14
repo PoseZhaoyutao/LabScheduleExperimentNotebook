@@ -1,0 +1,69 @@
+<h2>设计 3：四类实验记录模板字段</h2>
+<p class="subtitle">目标是“能直接记录实验”，同时让导出的 JSON/Markdown 足够结构化，未来可以交给 AI 做复盘和下一步建议。</p>
+
+<div class="mockup">
+  <div class="mockup-header">Template: qPCR 384-well plate</div>
+  <div class="mockup-body">
+    <div style="display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:16px">
+      <div>
+        <div style="display:grid;grid-template-columns:24px repeat(24,1fr);gap:3px;align-items:center;font-size:10px">
+          <div></div>
+          <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div>
+          <div>A</div><div style="background:#dbeafe;height:18px;border-radius:4px"></div><div style="background:#dbeafe;height:18px;border-radius:4px"></div><div style="background:#dcfce7;height:18px;border-radius:4px"></div><div style="background:#dcfce7;height:18px;border-radius:4px"></div><div style="background:#fee2e2;height:18px;border-radius:4px"></div><div style="background:#fee2e2;height:18px;border-radius:4px"></div><div style="background:#fef3c7;height:18px;border-radius:4px"></div><div style="background:#fef3c7;height:18px;border-radius:4px"></div><div style="background:#e0e7ff;height:18px;border-radius:4px"></div><div style="background:#e0e7ff;height:18px;border-radius:4px"></div><div style="background:#f1f5f9;height:18px;border-radius:4px"></div><div style="background:#f1f5f9;height:18px;border-radius:4px"></div><div style="background:#dbeafe;height:18px;border-radius:4px"></div><div style="background:#dbeafe;height:18px;border-radius:4px"></div><div style="background:#dcfce7;height:18px;border-radius:4px"></div><div style="background:#dcfce7;height:18px;border-radius:4px"></div><div style="background:#fee2e2;height:18px;border-radius:4px"></div><div style="background:#fee2e2;height:18px;border-radius:4px"></div><div style="background:#fef3c7;height:18px;border-radius:4px"></div><div style="background:#fef3c7;height:18px;border-radius:4px"></div><div style="background:#e0e7ff;height:18px;border-radius:4px"></div><div style="background:#e0e7ff;height:18px;border-radius:4px"></div><div style="background:#f1f5f9;height:18px;border-radius:4px"></div><div style="background:#f1f5f9;height:18px;border-radius:4px"></div>
+          <div>B</div><div style="background:#dbeafe;height:18px;border-radius:4px"></div><div style="background:#dbeafe;height:18px;border-radius:4px"></div><div style="background:#dcfce7;height:18px;border-radius:4px"></div><div style="background:#dcfce7;height:18px;border-radius:4px"></div><div style="background:#fee2e2;height:18px;border-radius:4px"></div><div style="background:#fee2e2;height:18px;border-radius:4px"></div><div style="background:#fef3c7;height:18px;border-radius:4px"></div><div style="background:#fef3c7;height:18px;border-radius:4px"></div><div style="background:#e0e7ff;height:18px;border-radius:4px"></div><div style="background:#e0e7ff;height:18px;border-radius:4px"></div><div style="background:#f1f5f9;height:18px;border-radius:4px"></div><div style="background:#f1f5f9;height:18px;border-radius:4px"></div><div style="background:#dbeafe;height:18px;border-radius:4px"></div><div style="background:#dbeafe;height:18px;border-radius:4px"></div><div style="background:#dcfce7;height:18px;border-radius:4px"></div><div style="background:#dcfce7;height:18px;border-radius:4px"></div><div style="background:#fee2e2;height:18px;border-radius:4px"></div><div style="background:#fee2e2;height:18px;border-radius:4px"></div><div style="background:#fef3c7;height:18px;border-radius:4px"></div><div style="background:#fef3c7;height:18px;border-radius:4px"></div><div style="background:#e0e7ff;height:18px;border-radius:4px"></div><div style="background:#e0e7ff;height:18px;border-radius:4px"></div><div style="background:#f1f5f9;height:18px;border-radius:4px"></div><div style="background:#f1f5f9;height:18px;border-radius:4px"></div>
+          <div>C-P</div><div style="grid-column:span 24;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:6px;padding:24px;text-align:center;color:#64748b">其余行同样支持批量填充、复制上一行、按样品/引物/条件上色</div>
+        </div>
+      </div>
+      <div style="display:grid;gap:10px">
+        <div class="placeholder" style="text-align:left;min-height:72px"><strong>板级信息</strong><br>日期、项目、仪器、试剂盒、程序、操作者</div>
+        <div class="placeholder" style="text-align:left;min-height:72px"><strong>孔位信息</strong><br>well、sample、primer/probe、condition、replicate、Ct/Cq</div>
+        <div class="placeholder" style="text-align:left;min-height:72px"><strong>分析信息</strong><br>内参、ΔCt/ΔΔCt、排除孔、结论、下一步</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cards">
+  <div class="card" data-choice="if" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>免疫荧光 IF</h3>
+      <p>细胞系、病毒/感染条件、处理、固定/通透/封闭、primary/secondary antibody、染色、显微镜参数、图像文件、定量方式、观察结论。</p>
+    </div>
+  </div>
+  <div class="card" data-choice="wb" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>Western Blot</h3>
+      <p>样品制备、裂解条件、蛋白定量、上样量、胶浓度、转膜、抗体信息、曝光、条带定量、异常记录、结论。</p>
+    </div>
+  </div>
+  <div class="card" data-choice="cell" onclick="toggleSelect(this)">
+    <div class="card-body">
+      <h3>常规细胞实验</h3>
+      <p>细胞状态、传代、铺板密度、转染质粒浓度/量/体积、转染试剂品牌/用量、感染 MOI、处理时间线、收样计划。</p>
+    </div>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="ok" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>字段方向对</h3>
+      <p>继续设计数据模型、导入导出和日程规划。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="qpcr-more" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>qPCR 需要更细</h3>
+      <p>优先细化 384 孔板批量填充、重复、内参和分析规则。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="cell-more" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>转染/细胞实验需要更细</h3>
+      <p>优先细化质粒、试剂、体积、时间线和感染/收样记录。</p>
+    </div>
+  </div>
+</div>

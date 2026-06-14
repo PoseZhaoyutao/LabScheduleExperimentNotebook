@@ -1,0 +1,97 @@
+<h2>首页工作流：实验记录模板工作台</h2>
+<p class="subtitle">第一版优先让你每天能快速新建和追踪实验记录，日程规划作为右侧行动层。</p>
+
+<div class="mockup">
+  <div class="mockup-header">Local Lab Notebook App / Home</div>
+  <div class="mockup-body">
+    <div style="display:grid;grid-template-columns:180px minmax(0,1fr) 250px;gap:16px;min-height:520px">
+      <aside class="mock-sidebar" style="padding:14px">
+        <div class="label">导航</div>
+        <div style="margin-top:12px;font-weight:700">实验模板</div>
+        <div style="margin-top:8px;color:#475569">记录库</div>
+        <div style="margin-top:8px;color:#475569">周/月计划</div>
+        <div style="margin-top:8px;color:#475569">季度/年度</div>
+        <div style="margin-top:8px;color:#475569">资料与 AI</div>
+      </aside>
+
+      <main class="mock-content" style="padding:16px">
+        <div class="label">快速新建</div>
+        <h3 style="margin-top:6px">今天要记录什么实验？</h3>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:14px">
+          <div class="placeholder" style="min-height:106px;text-align:left">
+            <strong>qPCR 384 孔板</strong>
+            <p style="margin:8px 0 0;color:#64748b">孔位矩阵、样品、引物、Ct、技术重复、板图导出</p>
+          </div>
+          <div class="placeholder" style="min-height:106px;text-align:left">
+            <strong>免疫荧光 IF</strong>
+            <p style="margin:8px 0 0;color:#64748b">细胞/病毒、抗体、固定通透、成像参数、代表图</p>
+          </div>
+          <div class="placeholder" style="min-height:106px;text-align:left">
+            <strong>Western blot</strong>
+            <p style="margin:8px 0 0;color:#64748b">样品、上样量、抗体、曝光、条带定量、结论</p>
+          </div>
+          <div class="placeholder" style="min-height:106px;text-align:left">
+            <strong>常规细胞实验</strong>
+            <p style="margin:8px 0 0;color:#64748b">细胞状态、传代/铺板、转染、感染、处理条件</p>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:12px;margin-top:16px">
+          <div class="placeholder" style="min-height:112px;text-align:left">
+            <strong>最近记录</strong>
+            <p style="margin:8px 0 0;color:#64748b">继续编辑、复制为新实验、导出 Markdown/JSON</p>
+          </div>
+          <div class="placeholder" style="min-height:112px;text-align:left">
+            <strong>轻量课题关联</strong>
+            <p style="margin:8px 0 0;color:#64748b">研究问题、假设、病毒/基因/蛋白、下一步动作</p>
+          </div>
+        </div>
+      </main>
+
+      <aside class="mock-sidebar" style="padding:14px;background:#f8fafc">
+        <div class="label">计划与复盘</div>
+        <h3 style="margin-top:6px">本周实验节奏</h3>
+        <div class="placeholder" style="min-height:74px;text-align:left;margin-top:10px">
+          <strong>Today</strong>
+          <p style="margin:6px 0 0;color:#64748b">2 个待记录，1 个待复盘</p>
+        </div>
+        <div class="placeholder" style="min-height:84px;text-align:left;margin-top:10px">
+          <strong>Week / Month</strong>
+          <p style="margin:6px 0 0;color:#64748b">计划、deadline、重复实验提醒</p>
+        </div>
+        <div class="placeholder" style="min-height:84px;text-align:left;margin-top:10px">
+          <strong>Quarter / Year</strong>
+          <p style="margin:6px 0 0;color:#64748b">里程碑、论文图、毕业节点</p>
+        </div>
+        <div class="placeholder" style="min-height:86px;text-align:left;margin-top:10px">
+          <strong>AI 预留</strong>
+          <p style="margin:6px 0 0;color:#64748b">导入资料后，定期整理和建议</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>这个首页层级基本对</h3>
+      <p>继续细化四类实验模板字段。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>日程规划要更突出</h3>
+      <p>把右侧计划层做得更像主工作区。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>记录库/搜索要更突出</h3>
+      <p>把最近记录、筛选和复用放到更高层级。</p>
+    </div>
+  </div>
+</div>

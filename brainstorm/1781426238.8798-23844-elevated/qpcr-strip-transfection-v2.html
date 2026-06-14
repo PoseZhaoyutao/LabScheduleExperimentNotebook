@@ -1,0 +1,102 @@
+<h2>设计修订：8 连排 qPCR 管映射到 384 孔板</h2>
+<p class="subtitle">把你真实的操作顺序放在前面：先按 8 连排管一排一排输入，再选择方向、重复和目标区域，整体投放到 384 孔板。</p>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">Step 1: 8-strip input</div>
+    <div class="mockup-body">
+      <div style="display:grid;gap:12px">
+        <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
+          <strong>Strip A / 8 连排管</strong>
+          <button class="mock-button">复制为下一排</button>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(8,1fr);gap:8px">
+          <div class="placeholder" style="min-height:92px">1<br><strong>S1</strong><br>ORFxx</div>
+          <div class="placeholder" style="min-height:92px">2<br><strong>S1</strong><br>GAPDH</div>
+          <div class="placeholder" style="min-height:92px">3<br><strong>S2</strong><br>ORFxx</div>
+          <div class="placeholder" style="min-height:92px">4<br><strong>S2</strong><br>GAPDH</div>
+          <div class="placeholder" style="min-height:92px">5<br><strong>NTC</strong><br>ORFxx</div>
+          <div class="placeholder" style="min-height:92px">6<br><strong>NTC</strong><br>GAPDH</div>
+          <div class="placeholder" style="min-height:92px">7<br><strong>Std</strong><br>ORFxx</div>
+          <div class="placeholder" style="min-height:92px">8<br><strong>Std</strong><br>GAPDH</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div class="placeholder" style="text-align:left;min-height:74px"><strong>输入字段</strong><br>sample、primer/probe、condition、template、mix、备注</div>
+          <div class="placeholder" style="text-align:left;min-height:74px"><strong>批量规则</strong><br>技术重复 n、样品顺序、引物顺序、空白/标准孔</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">Step 2: map to 384-well plate</div>
+    <div class="mockup-body">
+      <div style="display:grid;gap:12px">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+          <button class="mock-button">横向填充</button>
+          <button class="mock-button">纵向填充</button>
+          <button class="mock-button">旋转 90°</button>
+          <button class="mock-button">拖拽区域</button>
+        </div>
+        <div style="display:grid;grid-template-columns:24px repeat(12,1fr);gap:3px;font-size:10px;align-items:center">
+          <div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div>
+          <div>A</div><div style="background:#dbeafe;height:22px;border-radius:4px"></div><div style="background:#dbeafe;height:22px;border-radius:4px"></div><div style="background:#dcfce7;height:22px;border-radius:4px"></div><div style="background:#dcfce7;height:22px;border-radius:4px"></div><div style="background:#fee2e2;height:22px;border-radius:4px"></div><div style="background:#fee2e2;height:22px;border-radius:4px"></div><div style="background:#fef3c7;height:22px;border-radius:4px"></div><div style="background:#fef3c7;height:22px;border-radius:4px"></div><div style="background:#f8fafc;height:22px;border-radius:4px"></div><div style="background:#f8fafc;height:22px;border-radius:4px"></div><div style="background:#f8fafc;height:22px;border-radius:4px"></div><div style="background:#f8fafc;height:22px;border-radius:4px"></div>
+          <div>B</div><div style="background:#dbeafe;height:22px;border-radius:4px"></div><div style="background:#dbeafe;height:22px;border-radius:4px"></div><div style="background:#dcfce7;height:22px;border-radius:4px"></div><div style="background:#dcfce7;height:22px;border-radius:4px"></div><div style="background:#fee2e2;height:22px;border-radius:4px"></div><div style="background:#fee2e2;height:22px;border-radius:4px"></div><div style="background:#fef3c7;height:22px;border-radius:4px"></div><div style="background:#fef3c7;height:22px;border-radius:4px"></div><div style="background:#f8fafc;height:22px;border-radius:4px"></div><div style="background:#f8fafc;height:22px;border-radius:4px"></div><div style="background:#f8fafc;height:22px;border-radius:4px"></div><div style="background:#f8fafc;height:22px;border-radius:4px"></div>
+          <div>C-H</div><div style="grid-column:span 12;background:#f8fafc;border:1px dashed #cbd5e1;border-radius:6px;padding:28px;text-align:center;color:#64748b">目标区域可拖拽移动；映射后生成完整 384 孔板记录</div>
+        </div>
+        <div class="placeholder" style="text-align:left;min-height:76px"><strong>校验</strong><br>重复数是否完整、NTC 是否存在、内参是否匹配、空孔/边缘孔提醒、导出板图和上样表。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>转染/感染模板：按 24 孔板和 6 孔板组织</h2>
+<div class="mockup">
+  <div class="mockup-header">Transfection + optional infection</div>
+  <div class="mockup-body">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div>
+        <h3>24 孔板 / 6 孔板布局</h3>
+        <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:10px">
+          <div class="placeholder" style="min-height:70px"><strong>A1</strong><br>P1 only</div>
+          <div class="placeholder" style="min-height:70px"><strong>A2</strong><br>P1 + P2</div>
+          <div class="placeholder" style="min-height:70px"><strong>A3</strong><br>Vector</div>
+          <div class="placeholder" style="min-height:70px"><strong>A4</strong><br>Mock</div>
+          <div class="placeholder" style="min-height:70px"><strong>A5</strong><br>Virus+</div>
+          <div class="placeholder" style="min-height:70px"><strong>A6</strong><br>Virus-</div>
+          <div class="placeholder" style="grid-column:span 6;min-height:72px">切换为 6 孔板时显示 2 x 3 布局，字段保持一致</div>
+        </div>
+      </div>
+      <div style="display:grid;gap:10px">
+        <div class="placeholder" style="text-align:left;min-height:78px"><strong>质粒模块</strong><br>1-2 个质粒：名称、浓度 ng/µL、目标用量 ng/孔、体积 µL、比例、载体补齐。</div>
+        <div class="placeholder" style="text-align:left;min-height:78px"><strong>转染模块</strong><br>试剂品牌/型号、试剂用量、稀释液、终体积、孵育时间、换液时间。</div>
+        <div class="placeholder" style="text-align:left;min-height:78px"><strong>病毒感染模块</strong><br>是否感染、病毒株、MOI/接种量、感染时间、吸附/换液、收样时间点。</div>
+        <div class="placeholder" style="text-align:left;min-height:78px"><strong>输出</strong><br>每孔配方表、master mix 计算、时间线、后续 qPCR/IF/WB 关联。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="ok" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>这个修订对</h3>
+      <p>把 8 连排映射和转染/感染字段写进正式设计。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="more-map" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>qPCR 映射还要再细</h3>
+      <p>继续细化方向、重复、样品/引物排列规则。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="more-transfection" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>转染模板还要再细</h3>
+      <p>继续细化 24 孔/6 孔板、质粒组合、病毒感染时间线。</p>
+    </div>
+  </div>
+</div>
